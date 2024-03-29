@@ -41,7 +41,7 @@ Would like to run this project locally? Open terminal and follow these steps:
 
 1. Clone the repo
     ```sh
-    git clone https://agnekal.github.io/live-video.git
+    git clone https://agnekal.github.io/salaryList.git
     ```
 2. Install NPM packages
     ```sh
