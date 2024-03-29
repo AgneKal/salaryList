@@ -17,6 +17,50 @@
 </head>
 
 <body>
+    <div class="container">
+        <div class="left_side">
+            <div>
+                <div>
+                    <label for=""></label>
+                    <div class="input_shell" id="worker_name"><input type="text"></div>
+                </div>
+                <div>
+                    <label for=""></label>
+                    <div class="input_shell" id="worker_surname"><input type="text"></div>
+                </div>
+                <div>
+                    <label for=""></label>
+                    <div class="input_shell" id="worker_salary"><input type="text"></div>
+                </div>
+            </div>
+            <button class="btn" id="btn_add">Įtraukti darbuotoją</button>
+        </div>
+        <div class="right_side">
+            <div class="workers_list">
+                <table>
+                    <tr id="tb_header">
+                        <th>Vardas</th>
+                        <th>Pavardė</th>
+                        <th>Alga</th>
+                        <th>Pažymėti įrašą</th>
+                    </tr>
+                    <tr id="tb_row">
+                        <td id="td_name"></td>
+                        <td id="td_surname"></td>
+                        <td id="td_salary"></td>
+                        <td id="td_btn"></td>
+                    </tr>
+            </div>
+            <div class="right_side_buttom">
+                <button class="btn" id="btn_delete_selected">Ištinti pažymėtus</button>
+                <button class="btn" id="btn_delete_all">Ištinti visus</button>
+            </div>
+            <div class="right_side_buttom">
+                <div class="statistic">Atlyginimų suma:</div>
+                <div class="statistic">Atlyginimų vidurkis:</div>
+            </div>
+        </div>
+    </div>
 
 </body>
 
