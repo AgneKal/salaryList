@@ -88,6 +88,7 @@ const deleteSelected = () => {
             row.remove();
         }
     }
+    console.log(workers);
     localStorage.setItem("workers", JSON.stringify(workers));
     localStorage.setItem("salaries", JSON.stringify(salaries));
     statistic();
@@ -100,6 +101,8 @@ const deleteAll = () => {
     while (rows.length > 0) {
         rows[0].remove();
     }
+    workers = [];
+    salaries = [];
     localStorage.removeItem("workers");
     localStorage.removeItem("salaries");
     salarySum.textContent = 0;
