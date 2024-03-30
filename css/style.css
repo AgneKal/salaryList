@@ -1,0 +1,154 @@
+body,
+body * {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-image: url(../pexels-ylanite-koppens-796602.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: bisque;
+}
+
+header {
+    margin-top: 20px;
+    font-size: 40px;
+    align-self: center;
+}
+
+.container {
+    width: 80%;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.sides{
+    margin: 0 5px;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid gainsboro;
+    border-radius: 10px;
+    background-color: #eaede6d5;
+}
+
+.left_side {
+    width: 30%;
+}
+
+.inputs_nest {
+    padding-top: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.all_inputs {
+    margin: 5px 0;
+    padding: 10px 6px;
+    font-size: 20px;
+    border:none;
+    border-bottom: 2px solid #515151;
+    background-color: #eaede600;
+    color:#515151;
+}
+
+.all_inputs:focus {
+    outline: none;
+}
+
+.all_inputs::placeholder {
+    font-size: 20px;
+    color: #515151;
+}
+
+#btn_add{
+    margin: 20px auto;
+    background-color: #547C3E;
+}
+
+.right_side {
+    width: 70%;
+    padding-bottom: 10px;
+}
+
+#table {
+    width: 100%;
+    justify-self: self-start;
+    border-collapse: collapse;
+    overflow-x: auto;
+    border-bottom: 3px solid #000000;
+}
+
+th {
+    border-bottom: 3px solid #000000;
+    font-size: 20px;
+    padding: 5px 5px;
+}
+
+td {
+    border-bottom: 1px solid #000000;
+    padding: 5px 5px;
+    font-size: 20px;
+}
+
+#td_name{
+    width: 30%;
+}
+
+#td_surname {
+    width: 30%;
+}
+
+#td_salary {
+    width: 25%;;
+}
+
+#td_input_checkbox {
+    width: 15%;
+    text-align: center;
+}
+
+.buttons {
+    display: flex;
+    justify-content: flex-start;
+}
+
+#btn_delete_selected {
+    background-color: #F68C31;
+    margin-right: 10px;
+}
+
+#btn_delete_all {
+    background-color: #B24242;
+}
+
+.statistic {
+    font-size: 20px;
+    padding-bottom: 10px;
+}
+
+#salary_sum {
+    
+}
+
+#salary_average {
+}
+
+.btn {
+    margin: 20px 0;
+    padding: 8px 16px;
+    font-size: 20px;
+    color: white;
+    border: none;
+    border-radius: 10px;
+
+}

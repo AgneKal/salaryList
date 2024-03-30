@@ -17,47 +17,41 @@
 </head>
 
 <body>
+    <header>Darbo užmokesčio suvestinė</header>
     <div class="container">
-        <div class="left_side">
-            <div>
-                <div>
-                    <label for=""></label>
-                    <div class="input_shell" id="worker_name"><input type="text"></div>
-                </div>
-                <div>
-                    <label for=""></label>
-                    <div class="input_shell" id="worker_surname"><input type="text"></div>
-                </div>
-                <div>
-                    <label for=""></label>
-                    <div class="input_shell" id="worker_salary"><input type="text"></div>
-                </div>
+        <div class="sides left_side">
+            <div class="inputs_nest">
+                <input type="text" class="all_inputs" id="worker_name" placeholder="Vardas">
+                <input type="text" class="all_inputs" id="worker_surname" placeholder="Pavardė">
+                <input type="number" class="all_inputs" id="worker_salary" placeholder="Atlyginimas">
             </div>
             <button class="btn" id="btn_add">Įtraukti darbuotoją</button>
         </div>
-        <div class="right_side">
+        <div class="sides right_side">
             <div class="workers_list">
-                <table>
+                <table id="table">
                     <tr id="tb_header">
                         <th>Vardas</th>
                         <th>Pavardė</th>
-                        <th>Alga</th>
-                        <th>Pažymėti įrašą</th>
+                        <th>Atlyginimas</th>
+                        <th>Pažymėti</th>
                     </tr>
                     <tr id="tb_row">
-                        <td id="td_name"></td>
-                        <td id="td_surname"></td>
-                        <td id="td_salary"></td>
-                        <td id="td_btn"></td>
+                        <td id="td_name">Jonas</td>
+                        <td id="td_surname">Jonaitis</td>
+                        <td id="td_salary">2000</td>
+                        <td id="td_input_checkbox"><input type="checkbox" name="" id="check_worker"></td>
                     </tr>
+
+                </table>
             </div>
-            <div class="right_side_buttom">
+            <div class="buttons right_side_bottom">
                 <button class="btn" id="btn_delete_selected">Ištinti pažymėtus</button>
-                <button class="btn" id="btn_delete_all">Ištinti visus</button>
+                <button class="btn" id="btn_delete_all">Ištrinti visus</button>
             </div>
-            <div class="right_side_buttom">
-                <div class="statistic">Atlyginimų suma:<span id="salary_sum"></span></div>
-                <div class="statistic">Atlyginimų vidurkis:<span id="salary_average"></span></div>
+            <div class="right_side_bottom">
+                <div class="statistic">Atlyginimų suma: <span id="salary_sum">0</span></div>
+                <div class="statistic">Atlyginimų vidurkis: <span id="salary_average">0</span></div>
             </div>
         </div>
     </div>
