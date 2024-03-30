@@ -14,13 +14,13 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: bisque;
 }
 
 header {
     margin-top: 20px;
     font-size: 40px;
     align-self: center;
+    text-align: center;
 }
 
 .container {
@@ -92,14 +92,16 @@ select:-webkit-autofill {
     width: 100%;
     justify-self: self-start;
     border-collapse: collapse;
-    overflow-x: auto;
+    /* overflow-x: auto; */
     border-bottom: 3px solid #000000;
+    table-layout: fixed;
 }
 
 th {
     border-bottom: 3px solid #000000;
     font-size: 20px;
     padding: 5px 5px;
+    word-wrap: break-word;
 }
 
 .th_30 {
@@ -121,6 +123,7 @@ td {
     border-bottom: 1px solid #000000;
     padding: 5px 5px;
     font-size: 20px;
+    word-wrap: break-word;
 }
 
 .td_name{
@@ -178,4 +181,25 @@ td {
     border: none;
     border-radius: 10px;
 
+}
+
+@media (max-width: 992px) {
+    .container {
+        width: 100%;
+        margin: 10px 0;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .sides {
+        width: 100%;
+    }
+
+    .right_side {
+        margin-top: 20px;
+    }
+
+    header {
+        font-size: 24px;
+    }
 }
