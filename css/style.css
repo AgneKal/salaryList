@@ -78,6 +78,7 @@ header {
 .right_side {
     width: 70%;
     padding-bottom: 10px;
+    padding-top: 8px;
 }
 
 #table {

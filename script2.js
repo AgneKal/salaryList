@@ -42,8 +42,7 @@ const addWorker = () => {
     localStorage.setItem("workers", JSON.stringify(workers));
     localStorage.setItem("salaries", JSON.stringify(salaries));
     addRow(worker);
-    salarySum.textContent = salaries.reduce((a, s) => a += s, 0);
-    salaryAverage.textContent = (salaries.reduce((a, s) => a += s, 0)) / salaries.length;
+    statistic();
 }
 
 const addRow = (worker) => {
@@ -75,8 +74,7 @@ const showWorkers = () => {
     workers.forEach((t) => {
         addRow(t);
     })
-    salarySum.textContent = salaries.reduce((a, s) => a += s, 0);
-    salaryAverage.textContent = (salaries.reduce((a, s) => a += s, 0)) / salaries.length;
+    statistic();
 }
 
 const deleteSelected = () => {
@@ -92,9 +90,7 @@ const deleteSelected = () => {
     }
     localStorage.setItem("workers", JSON.stringify(workers));
     localStorage.setItem("salaries", JSON.stringify(salaries));
-    salarySum.textContent = salaries.reduce((a, s) => a += s, 0);
-    salaryAverage.textContent = (salaries.reduce((a, s) => a += s, 0)) / salaries.length;
-
+    statistic();
 }
 
 btnDel.onclick = deleteSelected;
@@ -108,10 +104,14 @@ const deleteAll = () => {
     localStorage.removeItem("salaries");
     salarySum.textContent = 0;
     salaryAverage.textContent = 0;
-
 }
 
 btnDelAll.onclick = deleteAll;
+
+const statistic = () => {
+    salarySum.textContent = salaries.reduce((a, s) => a += s, 0);
+    salaryAverage.textContent = (salaries.reduce((a, s) => a += s, 0)) / salaries.length;
+}
 
 const lsWorkers = localStorage.getItem("workers");
 const lsSalaries = localStorage.getItem("salaries");
@@ -121,5 +121,3 @@ if (lsWorkers != null && lsSalaries != null) {
     salaries = JSON.parse(lsSalaries);
     showWorkers();
 }
-
-console.log(salaries);
