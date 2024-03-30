@@ -106,15 +106,10 @@ th {
 
 .th_30 {
     width: 30%;
-    text-align: center;
+    text-align:left ;
 }
 
-.th_25 {
-    width: 25%;
-    text-align: center;
-}
-
-.th_15 {
+.th_10 {
     width: 15%;
     text-align: center;
 }
@@ -132,15 +127,16 @@ td {
 
 .td_surname {
     width: 30%;
+    text-align: left;
 }
 
 .td_salary {
-    width: 25%;
-    text-align: center;
+    width: 30%;
+    text-align: left;
 }
 
 .td_input_checkbox {
-    width: 15%;
+    width: 10%;
     text-align: center;
 }
 
@@ -207,6 +203,6 @@ td {
     }
 
     header {
-        font-size: 24px;
+        font-size: 26px;
     }
 }
