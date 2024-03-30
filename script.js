@@ -88,7 +88,6 @@ const deleteSelected = () => {
             row.remove();
         }
     }
-    console.log(workers);
     localStorage.setItem("workers", JSON.stringify(workers));
     localStorage.setItem("salaries", JSON.stringify(salaries));
     statistic();
