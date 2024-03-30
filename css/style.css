@@ -70,6 +70,13 @@ header {
     color: #515151;
 }
 
+input:-webkit-autofill,
+textarea:-webkit-autofill,
+select:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 1000px #eaede6 inset !important;
+    -webkit-text-fill-color: #515151 !important;
+}
+
 #btn_add{
     margin: 20px auto;
     background-color: #547C3E;
@@ -93,6 +100,18 @@ th {
     border-bottom: 3px solid #000000;
     font-size: 20px;
     padding: 5px 5px;
+}
+
+.th_30 {
+    width: 30%;
+}
+
+.th_25 {
+    width: 25%;
+}
+
+.th_15 {
+    width: 15%;
 }
 
 td {
