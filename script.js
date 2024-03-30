@@ -7,19 +7,20 @@ const workerSalary = document.getElementById('worker_salary');
 const btnAdd = document.getElementById('btn_add');
 
 const table = document.getElementById('table')
-const tableRow = document.getElementById('tb_row');
+const tableRow = document.getElementsByClassName('tb_row');
 
-const tdName = document.getElementById('td_name');
-const tdSurname = document.getElementById('td_surname');
-const tdSalary = document.getElementById('td_salary');
-const tdIsChecked = document.getElementById('td_input_checkbox');
+const tdName = document.getElementsByClassName('td_name');
+const tdSurname = document.getElementsByClassName('td_surname');
+const tdSalary = document.getElementsByClassName('td_salary');
+const tdIsChecked = document.getElementsByClassName('td_input_checkbox');
 
+console.log(tableRow);
 
 const btnDel = document.getElementById('btn_delete_selected');
 const btnDelAll = document.getElementById('btn_delete_all');
 
-const workers = [];
-const salaries = [];
+let workers = [];
+let salaries = [];
 
 const addWorker = () => {
     const name = workerName.value;
@@ -48,6 +49,7 @@ const showWorkers = () => {
     tdSurname.innerHTML = '';
     tdSalary.innerHTML = '';
     tdIsChecked.innerHTML = '';
+    //tableRow.remove();
     workers.forEach((t) => {
         const newWorker = table.insertRow(-1);
         const name = newWorker.insertCell(0)
@@ -61,7 +63,7 @@ const showWorkers = () => {
         const inputCheckbox = document.createElement('input');
         inputCheckbox.setAttribute('type', 'checkbox');
         inputCheckbox.id = "check_worker";
-        checkbox.id = "td_input_checkbox";
+        checkbox.class = "td_input_checkbox";
         checkbox.appendChild(inputCheckbox)
 
     })
@@ -74,14 +76,26 @@ const deleteSelected = () => {
 btnDel.onclick = deleteSelected;
 
 const deleteAll = () => {
-    const empty = document.createElement("li");
-    products = [];
-    localStorage.removeItem("products");
-    showProducts();
-    list.appendChild(empty)
+    workers = [];
+    salaries = [];
+    const empty = table.insertRow(-1);
+    const name = empty.insertCell(0)
+    const surname = empty.insertCell(1)
+    const salary = empty.insertCell(2)
+    const checkbox = empty.insertCell(3)
+    localStorage.removeItem("workers");
+    localStorage.removeItem("salaries");
+    showWorkers();
+    table.appendChild(empty);
 }
 
 btnDelAll.onclick = deleteAll;
 
 const lsWorkers = localStorage.getItem("workers");
 const lsSalaries = localStorage.getItem("salaries");
+
+if (lsWorkers != null && lsSalaries != null) {
+    workers = JSON.parse(lsWorkers);
+    salaries = JSON.parse(lsSalaries);
+    showWorkers();
+}

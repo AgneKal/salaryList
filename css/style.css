@@ -100,19 +100,20 @@ td {
     font-size: 20px;
 }
 
-#td_name{
+.td_name{
     width: 30%;
 }
 
-#td_surname {
+.td_surname {
     width: 30%;
 }
 
-#td_salary {
-    width: 25%;;
+.td_salary {
+    width: 25%;
+    text-align: center;
 }
 
-#td_input_checkbox {
+.td_input_checkbox {
     width: 15%;
     text-align: center;
 }
@@ -137,10 +138,13 @@ td {
 }
 
 #salary_sum {
-    
+    font-size: 24px;
+    font-weight: 600;
 }
 
 #salary_average {
+    font-size: 24px;
+    font-weight: 600;
 }
 
 .btn {
