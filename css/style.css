@@ -183,6 +183,13 @@ td {
 
 }
 
+@media (max-width: 1400px) {
+    .container {
+        width: 90%;
+        margin: 10px 0;
+    }
+}
+
 @media (max-width: 992px) {
     .container {
         width: 100%;
@@ -190,7 +197,7 @@ td {
         flex-direction: column;
         justify-content: center;
     }
-
+        
     .sides {
         width: 100%;
     }
