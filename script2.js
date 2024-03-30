@@ -110,7 +110,7 @@ btnDelAll.onclick = deleteAll;
 
 const statistic = () => {
     salarySum.textContent = salaries.reduce((a, s) => a += s, 0);
-    salaryAverage.textContent = ((salaries.reduce((a, s) => a += s, 0)) / salaries.length).toFixed(2) || 0;
+    salaryAverage.textContent = (salaries.reduce((a, s) => a += s, 0)) / salaries.length.toFixed(2) > 0 ? (salaries.reduce((a, s) => a += s, 0)) / salaries.length.toFixed(2) : 0;
 }
 
 const lsWorkers = localStorage.getItem("workers");
