@@ -104,14 +104,17 @@ th {
 
 .th_30 {
     width: 30%;
+    text-align: center;
 }
 
 .th_25 {
     width: 25%;
+    text-align: center;
 }
 
 .th_15 {
     width: 15%;
+    text-align: center;
 }
 
 td {
