@@ -111,7 +111,7 @@ const deleteAll = () => {
 btnDelAll.onclick = deleteAll;
 
 const statistic = () => {
-    salarySum.textContent = salaries.reduce((a, s) => a += s, 0);
+    salarySum.textContent = (salaries.reduce((a, s) => a += s, 0)).toFixed(2);
     const average = ((salaries.reduce((a, s) => a += s, 0)) / salaries.length).toFixed(2);
     salaryAverage.textContent = isNaN(average) ? 0 : average;
 }
