@@ -6,7 +6,7 @@ const workerSalary = document.getElementById('worker_salary');
 
 const btnAdd = document.getElementById('btn_add');
 
-const table = document.getElementById('table')
+const table = document.getElementById('table');
 const tableRow = document.getElementsByClassName('tb_row');
 const tdName = document.getElementsByClassName('td_name');
 const tdSurname = document.getElementsByClassName('td_surname');
@@ -51,7 +51,7 @@ const addRow = (worker) => {
     const name = newRow.insertCell(0);
     name.className = 'td_name';
     const surname = newRow.insertCell(1);
-    surname.className = 'td_surname'
+    surname.className = 'td_surname';
     const salary = newRow.insertCell(2);
     salary.className = 'td_salary';
     const checkbox = newRow.insertCell(3);
@@ -65,7 +65,7 @@ const addRow = (worker) => {
     const inputCheckbox = document.createElement('input');
     inputCheckbox.setAttribute('type', 'checkbox');
     inputCheckbox.className = "check_worker";
-    checkbox.appendChild(inputCheckbox)
+    checkbox.appendChild(inputCheckbox);
 }
 
 btnAdd.onclick = addWorker;
@@ -112,7 +112,7 @@ btnDelAll.onclick = deleteAll;
 
 const statistic = () => {
     salarySum.textContent = salaries.reduce((a, s) => a += s, 0);
-    const average = ((salaries.reduce((a, s) => a += s, 0)) / salaries.length).toFixed(2)
+    const average = ((salaries.reduce((a, s) => a += s, 0)) / salaries.length).toFixed(2);
     salaryAverage.textContent = isNaN(average) ? 0 : average;
 }
 
