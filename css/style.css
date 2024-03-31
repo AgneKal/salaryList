@@ -92,7 +92,6 @@ select:-webkit-autofill {
     width: 100%;
     justify-self: self-start;
     border-collapse: collapse;
-    /* overflow-x: auto; */
     border-bottom: 3px solid #000000;
     table-layout: fixed;
 }
@@ -112,6 +111,13 @@ th {
 .th_10 {
     width: 15%;
     text-align: center;
+}
+
+
+
+.fa-square-check {
+    font-size: 18px;
+    display: none;
 }
 
 td {
@@ -204,5 +210,48 @@ td {
 
     header {
         font-size: 26px;
+    }
+}
+
+@media (max-width: 576px) {
+    .all_inputs {
+            font-size: 18px;
+    }
+
+    .all_inputs::placeholder {
+        font-size: 18px;
+    }
+
+    th {
+        font-size: 18px;
+    }
+
+    td {
+        font-size: 18px;
+    }
+
+    .statistic {
+        font-size: 18px;
+    }
+
+    #salary_sum {
+        font-size: 20px;
+    }
+
+    #salary_average {
+        font-size: 20px;
+    }
+
+    .btn {
+        font-size: 18px;
+    }
+
+    .fa-square-check {
+        font-size: 18px;
+        display: inline-block;
+    }
+
+    .check {
+        display: none;
     }
 }
