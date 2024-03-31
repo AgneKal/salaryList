@@ -15,8 +15,8 @@ const tdIsChecked = document.getElementsByClassName('td_input_checkbox');
 
 const salarySum = document.getElementById('salary_sum');
 const salaryAverage = document.getElementById('salary_average');
-salarySum.textContent = 0;
-salaryAverage.textContent = 0;
+salarySum.textContent = `${(0).toFixed(2)} €`;
+salaryAverage.textContent = `${(0).toFixed(2)} €`;
 
 
 const btnDel = document.getElementById('btn_delete_selected');
@@ -104,16 +104,16 @@ const deleteAll = () => {
     salaries = [];
     localStorage.removeItem("workers");
     localStorage.removeItem("salaries");
-    salarySum.textContent = 0;
-    salaryAverage.textContent = 0;
+    salarySum.textContent = `${(0).toFixed(2)} €`;
+    salaryAverage.textContent = `${(0).toFixed(2)} €`;
 }
 
 btnDelAll.onclick = deleteAll;
 
 const statistic = () => {
-    salarySum.textContent = (salaries.reduce((a, s) => a += s, 0)).toFixed(2);
+    salarySum.textContent = `${(salaries.reduce((a, s) => a += s, 0)).toFixed(2)} €`;
     const average = ((salaries.reduce((a, s) => a += s, 0)) / salaries.length).toFixed(2);
-    salaryAverage.textContent = isNaN(average) ? 0 : average;
+    salaryAverage.textContent = `${isNaN(average) ? 0 : average} €`;
 }
 
 const lsWorkers = localStorage.getItem("workers");
